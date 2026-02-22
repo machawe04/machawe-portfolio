@@ -1,61 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Machawe Dikiza - IT Student & Developer Portfolio">
     <title>Machawe Dikiza | Portfolio</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 60px 20px;
             text-align: center;
-            padding: 50px;
         }
 
         h1 {
             color: #38bdf8;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
         }
 
         .card {
-            background: #1e293b;
-            padding: 20px;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 30px;
             margin: 20px auto;
-            width: 300px;
-            border-radius: 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+        }
+
+        .card h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: #38bdf8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0ea5e9;
+            text-decoration: underline;
         }
 
         button {
-            background: #38bdf8;
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
             border: none;
-            padding: 10px 20px;
+            color: white;
+            padding: 12px 30px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
         }
 
         button:hover {
-            background: #0ea5e9;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+                margin: 15px 0;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Machawe Dikiza</h1>
+        <p class="subtitle">Information Technology Student | Developer 🚀</p>
+    </header>
 
-    <h1>Machawe Dikiza</h1>
-    <p>Information Technology Student | Future Millionaire 🚀</p>
+    <main>
+        <section class="card">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Networking</span>
+                <span class="skill-tag">C++</span>
+            </div>
+        </section>
 
-    <div class="card">
-        <h3>Skills</h3>
-        <p><a href="html"HTML</a></p>
-        <p>Java</p>
-        <p>Networking</p>
-        <p>c++</p>
-    </div>
+        <section class="card">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:dikizamachawe4@gmail.com">dikizamachawe4@gmail.com</a></p>
+            </div>
+            <button onclick="handleGreeting()">Say Hello</button>
+        </section>
+    </main>
 
-    <div class="card">
-        <h3>Contact</h3>
-        <p>Email: dikizamachawe4@gmail.com</p>
-        <button onclick="alert('Thanks for visiting my portfolio!')">
-            Say Hello
-        </button>
-    </div>
-
+    <script>
+        function handleGreeting() {
+            alert('Thanks for visiting my portfolio!');
+        }
+    </script>
 </body>
 </html>
